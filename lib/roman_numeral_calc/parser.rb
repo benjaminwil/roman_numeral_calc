@@ -4,6 +4,15 @@ module RomanNumeralCalc
     def initialize(input)
       clean_input = input.gsub(/\s+/, '')
       equation = parse_equation(clean_input)
+      evaluate(equation)
+    end
+
+    def evaluate(equation)
+      operand1, operator, operand2 = equation
+      case operator
+      when "+"
+        operand1 + operand2
+      end
     end
 
     def parse_equation(clean_input)

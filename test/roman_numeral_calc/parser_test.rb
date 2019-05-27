@@ -4,7 +4,8 @@ module RomanNumeralCalc
   class ParserTest < Minitest::Test
 
     def test_that_a_simple_calculation_can_be_parsed
-      assert false
+      equation = Parser.new("i + iii")
+      assert equation, 4
     end
 
   end
