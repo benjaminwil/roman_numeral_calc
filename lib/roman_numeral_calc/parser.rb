@@ -1,10 +1,12 @@
 module RomanNumeralCalc
   class Parser
 
+    attr_reader :result
+
     def initialize(input)
       clean_input = input.gsub(/\s+/, '')
       equation = parse_equation(clean_input)
-      evaluate(equation)
+      @result = evaluate(equation)
     end
 
     def evaluate(equation)
