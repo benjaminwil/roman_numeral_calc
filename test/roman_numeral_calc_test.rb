@@ -16,4 +16,10 @@ class RomanNumeralCalcTest < Minitest::Test
 
   def test_that_v_equals_5
   end
+
+  def test_that_cdxcix_equals_499
+  end
+
+  def test_that_cmxcix_equals_999
+  end
 end

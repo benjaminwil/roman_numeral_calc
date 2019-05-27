@@ -37,7 +37,7 @@ module RomanNumeralCalc
 
     def evaluate_numeral(characters)
       value = 0
-      characters.each do |character|
+      characters.each.with_index do |character, index|
         value += symbol(character).value
       end
       return value
@@ -50,6 +50,14 @@ module RomanNumeralCalc
     def symbols
       Symbols.new.all
     end
+
+    # NOT IMPLEMENTED
+    def one_before?(character1, character2)
+      # Named to deal with "one before" numbers like IV and IX, but can be
+      # applied to larger numbers like XL and CM as well.
+      false
+    end
+
 
     def valid_numeral?(numeral)
       # Provisional, since we only expect the "+" operator for the moment.
