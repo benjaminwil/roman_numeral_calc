@@ -38,11 +38,15 @@ module RomanNumeralCalc
     end
 
     def evaluate_numeral(characters)
-      value = 0
-      characters.each.with_index do |character, index|
-        value += symbol(character).value
+      count = 0
+      characters.each_slice(2).to_a do |numeral|
+        if numeral.count == 2
+          count += handle_pairs
+        else
+          count += handle_single
+        end
       end
-      return value
+      return count
     end
 
     def symbol(symbol)
@@ -54,12 +58,15 @@ module RomanNumeralCalc
     end
 
     # NOT IMPLEMENTED
-    def one_before?(character1, character2)
-      # Named to deal with "one before" numbers like IV and IX, but can be
-      # applied to larger numbers like XL and CM as well.
-      false
+    def handle_pairs
+      # handle a value like "XI" or a *one before* value like "XL"
+      # returns the value. In the case of "XI" => 11
     end
 
+    def handle_single
+      # handles a value like "V" or "C".
+      # returns the value. In the case of "V" => 5
+    end
 
     def valid_numeral?(numeral)
       # Provisional, since we only expect the "+" operator for the moment.
