@@ -12,12 +12,8 @@ require "roman_numeral_calc"
 
 require "pry"
 
-puts
-puts "Creating base symbols..."
-
-RomanNumeralCalc::Symbols.new
-
 puts "Enter Roman numerals for calculation..."
+puts "Example of acceptable input: ix + xi"
 puts
 printf "> "
 
