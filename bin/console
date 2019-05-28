@@ -11,10 +11,4 @@ require "roman_numeral_calc"
 # Pry.start
 
 require "pry"
-
-puts "Enter Roman numerals for calculation..."
-puts "Example of acceptable input: ix + xi"
-puts
-printf "> "
-
-input = gets
+Pry.start(__FILE__)

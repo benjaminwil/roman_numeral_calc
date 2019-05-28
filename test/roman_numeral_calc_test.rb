@@ -5,21 +5,7 @@ class RomanNumeralCalcTest < Minitest::Test
     refute_nil ::RomanNumeralCalc::VERSION
   end
 
-  def test_that_i_equals_1
-  end
-
-  def test_that_iv_equals_4
-  end
-
-  def test_that_iiv_is_not_a_roman_numeral
-  end
-
-  def test_that_v_equals_5
-  end
-
-  def test_that_cdxcix_equals_499
-  end
-
-  def test_that_cmxcix_equals_999
+  def test_it_does_something_useful
+    assert false
   end
 end
