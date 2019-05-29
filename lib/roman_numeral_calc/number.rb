@@ -1,11 +1,12 @@
+require "roman_numeral_calc/includes/symbols"
+
 module RomanNumeralCalc
   class Number
 
-    attr_reader :symbols
+    include ::RomanNumeralCalc::Symbols
 
     def initialize(user_input)
       @input = user_input
-      @symbols = symbols
     end
 
     def evaluate
@@ -25,17 +26,8 @@ module RomanNumeralCalc
       end
     end
 
-    def symbols
-      {
-        :I => 1,
-        :V => 5,
-        :X => 10,
-        :L => 50
-      }
-    end
-
     def symbol_values
-      @input.chars.map { |char| @symbols[char.upcase.to_sym] }
+      @input.chars.map { |char| symbols[char.upcase.to_sym] }
     end
   end
 end
