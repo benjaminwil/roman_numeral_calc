@@ -3,10 +3,10 @@ module RomanNumeralCalc
 
     def operators
       {
-        :add => /(\+)/,
-        :divide => /(\/)/,
-        :multiply => /(\*|x)/,
-        :subtract => /(\-)/
+        :+ => /(\+)/,
+        :/ => /(\/)/,
+        :* => /(\*|x)/,
+        :- => /(\-)/
       }
     end
 
