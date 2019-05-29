@@ -5,15 +5,18 @@ module RomanNumeralCalc
 
     include ::RomanNumeralCalc::Symbols
 
+    attr_reader :input, :output
+
     def initialize(user_input)
       @input = user_input
+      @output = evaluate
     end
+
+    private
 
     def evaluate
       numeric_values.sum
     end
-
-    private
 
     def numeric_values
       symbol_values.map.with_index do |value, i|
