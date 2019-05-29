@@ -1,7 +1,7 @@
 require "roman_numeral_calc/includes/symbols"
 
 module RomanNumeralCalc
-  class Number
+  class Operand
 
     include ::RomanNumeralCalc::Symbols
 
